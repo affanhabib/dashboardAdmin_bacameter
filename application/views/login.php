@@ -13,14 +13,14 @@
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                                     <div class="card-header"><h3 class="text-center font-weight-light my-4">Login</h3></div>
                                     <div class="card-body">
-                                        <form action="<?= site_url('login') ?>" method="POST">
+                                        <form action="<?= base_url('login/dologin') ?>" method="POST">
                                             <div class="form-group">
                                                 <label class="small mb-1" for="inputEmailAddress">Email or Username</label>
-                                                <input class="form-control py-4" id="inputEmailAddress" type="text" placeholder="Enter Username or email address" />
+                                                <input class="form-control py-4" id="inputEmailAddress" name="inputEmailAddress" type="text" placeholder="Enter Username or email address" />
                                             </div>
                                             <div class="form-group">
                                                 <label class="small mb-1" for="inputPassword">Password</label>
-                                                <input class="form-control py-4" id="inputPassword" type="password" placeholder="Enter password" />
+                                                <input class="form-control py-4" id="inputPassword" name="inputPassword" type="password" placeholder="Enter password" />
                                             </div>
                                             <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
 												<input type="submit" class="btn btn-success w-100" value="Login" />

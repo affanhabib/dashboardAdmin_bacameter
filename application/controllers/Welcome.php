@@ -23,6 +23,16 @@ class Welcome extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+
+	public function __construct()
+	{
+		parent::__construct();
+		if(!$this->session->user_login)
+		{
+			$this->session->set_flashdata('message', array('type' => 'error', 'message' => ["Silahkan masuk terlebih dahulu"]));
+			redirect(base_url("login/index")); 
+        }
+	}
 	public function index()
 	{
 		$this->load->view('sbadmin');
